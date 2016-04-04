@@ -1,0 +1,79 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.25em;
+	margin-bottom: 5px;
+}
+
+h3 {
+	font-size: .85em;
+	font-style: italic;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+h5 {
+	font-size: .85em;
+}
+
+p {
+	font-size: .75em;
+}
+
+ul { 
+	position: relative;
+	clear: both;
+	font-size: .8em;
+}
+
+li {
+	margin-left: 20px;
+}
+
+.section {
+	margin-bottom: 10px;
+
+}
+
+.body {
+	width: 8.5in;
+
+}
+
+.section h2 {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.section h3 {
+	position: relative;
+	float: left;
+}
+
+.section .date {
+	position: relative;
+	float: right;
+	font-size: .85em;
+	font-style: italic;
+}
+
+.sub {
+	margin-bottom: 10px;
+}
+
+.title {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.spacer {
+	height: 20px;
+	width: 100%;
+}
