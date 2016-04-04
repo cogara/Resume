@@ -5,27 +5,39 @@
 
 body {
   background-color: gainsboro;
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(220, 220, 220, 0.7) 50%); }
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(220, 220, 220, 0.7) 50%);
+  position: relative; }
 
-.note {
-  background-color: white;
-  font-size: .85em;
-  min-width: 320px;
-  width: 95%;
-  max-width: 900px;
-  padding: 10px;
-  margin: 20px auto;
+.container, .note {
+  border: 1px solid rgba(150, 150, 150, 0.5);
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4); }
 
 .container {
+  position: relative;
   min-width: 320px;
-  width: 95%;
   max-width: 900px;
-  margin: 20px auto;
-  background-color: #ebebeb;
+  margin: 75px auto 20px;
   padding: 15px;
-  border: 1px solid rgba(150, 150, 150, 0.5);
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4); }
+  width: 95%;
+  background-color: #ebebeb; }
+
+.note {
+  font-size: .85em;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  z-index: 2;
+  width: 100%;
+  padding: 5px 15px; }
+
+.note p {
+  display: none;
+  margin: 10px 0;
+  text-indent: 10px; }
+
+.note:hover h4 ~ p {
+  display: block; }
 
 .myInfo {
   height: 100px;
@@ -38,7 +50,7 @@ body {
 .portrait {
   position: absolute;
   right: 0;
-  top: 0px;
+  top: 0;
   height: 120px;
   width: 120px;
   border: 7px solid white;
@@ -52,7 +64,7 @@ body {
   font-size: 1.25em;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  margin: 10px 0px 5px;
+  margin: 10px 0px 10px;
   text-indent: 5px; }
 
 .company {
@@ -61,28 +73,28 @@ body {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   padding-right: 2px;
-  margin: 2px 0 5px; }
+  margin: 0 0 5px; }
 
 .title {
   float: left;
   clear: left;
+  text-indent: 10px;
   font-size: .85em;
   font-style: italic;
-  font-weight: normal;
-  /*text-decoration: underline;*/ }
+  font-weight: normal; }
 
 .date {
   float: right;
   font-size: .85em;
   font-style: italic; }
 
-.task {
-  margin-left: 20px; }
-
 .description {
   clear: both;
   font-size: .85em;
   margin-bottom: 15px; }
+
+.task {
+  margin-left: 20px; }
 
 @media all and (max-width: 475px) {
   body {
