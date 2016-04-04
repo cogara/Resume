@@ -1,0 +1,97 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-color: gainsboro;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(220, 220, 220, 0.7) 50%); }
+
+.note {
+  background-color: white;
+  font-size: .85em;
+  min-width: 320px;
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+  margin: 20px auto;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4); }
+
+.container {
+  min-width: 320px;
+  width: 95%;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #ebebeb;
+  padding: 15px;
+  border: 1px solid rgba(150, 150, 150, 0.5);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4); }
+
+.myInfo {
+  height: 100px;
+  margin: 0 0 30px;
+  position: relative; }
+
+.name {
+  font-size: 1.5em; }
+
+.portrait {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  height: 120px;
+  width: 120px;
+  border: 7px solid white;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4); }
+
+.portrait img {
+  width: 100%;
+  height: 100%; }
+
+.category {
+  font-size: 1.25em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 10px 0px 5px;
+  text-indent: 5px; }
+
+.company {
+  font-size: .85em;
+  float: left;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-right: 2px;
+  margin: 2px 0 5px; }
+
+.title {
+  float: left;
+  clear: left;
+  font-size: .85em;
+  font-style: italic;
+  font-weight: normal;
+  /*text-decoration: underline;*/ }
+
+.date {
+  float: right;
+  font-size: .85em;
+  font-style: italic; }
+
+.task {
+  margin-left: 20px; }
+
+.description {
+  clear: both;
+  font-size: .85em;
+  margin-bottom: 15px; }
+
+@media all and (max-width: 475px) {
+  body {
+    font-size: 14px; }
+  .container {
+    width: 98%; }
+  .portrait {
+    height: 75px;
+    width: 75px; }
+  .myInfo {
+    height: 75px;
+    margin: 0 0 10px; } }
