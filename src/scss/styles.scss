@@ -1,0 +1,157 @@
+$sans-serif: 'Noto Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: 'Noto Serif','Georgia', serif;
+$muted: #555;
+$soft: #AAA;
+@mixin clearfix {
+    &:after,
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    & {
+        *zoom: 1;
+    }
+}
+@mixin shadow {
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F2F2F2;
+    position: relative;
+    font: normal 1rem/1.4 $serif;
+    color: #222;
+}
+p {
+    margin-bottom: 1em;
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) and (max-width: 1140px) {
+        padding: 2rem;
+    }
+}
+.resume {
+    @include shadow;
+    position: relative;
+    padding: 2rem 2rem 0.25rem;
+    background-color: #FFFFFF;
+}
+.section {
+    font-size: 0.85rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 1.5rem;
+    }
+}
+.person {
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.person__meta {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $muted;
+    font-family: $serif;
+    @media screen and (min-width: 768px) {
+        overflow: hidden;
+        font-size: 0.85rem;
+        text-align: left;
+    }
+    a {
+        text-decoration: none;
+    }
+    .fa {
+        margin-right: 0.5em;
+        color: $soft;
+    }
+}
+.person__portrait {
+    > img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+    @media screen and (min-width: 768px) {
+        float: left;
+        margin-right: 1.5rem;
+    }
+}
+.person__name {
+    font-size: 2rem;
+    font-family: $sans-serif;
+    font-weight: normal;
+    margin-bottom: 0.33rem;
+    margin-top: 0;
+    @media screen and (min-width: 768px) {}
+}
+.person__address,
+.person__email,
+.person__github,
+.person__phone {
+    display: block;
+    @include clearfix;
+}
+.category {
+    font: 500 0.75em/1.8 $sans-serif;
+    color: #555;
+    text-transform: uppercase;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    margin: 10px 0;
+}
+.job__meta,
+.school__meta {
+    @include clearfix;
+}
+.item__name,
+.job__title,
+.school__name {
+    @media screen and (min-width: 768px) {
+        float: left;
+        margin: 0 1rem 0 0;
+    }
+}
+.job {
+    @include clearfix;
+    margin: 0 0 1rem;
+}
+.job__company {
+    display: block;
+    color: $muted;
+    font-style: italic;
+    @media screen and (min-width: 768px) {
+        float: left;
+    }
+}
+.job__date,
+.school__date {
+    color: $soft;
+    font-family: $sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+        float: right;
+    }
+}
+.list--bullets {
+    font-size: 0.85rem;
+    padding-left: 0.5rem;
+    margin-left: 0.66rem;
+    > li {
+        margin-bottom: 0.25em;
+    }
+}
+.job__description,
+.school__description,
+.skills {
+    margin-top: 0.5em;
+}
