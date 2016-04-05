@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #F2F2F2;
+  position: relative;
+  font: normal 1rem/1.4 "Noto Serif", "Georgia", serif;
+  color: #222; }
+
+p {
+  margin-bottom: 1em; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) and (max-width: 1140px) {
+    .container {
+      padding: 2rem; } }
+
+.resume {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 2rem 2rem 0.25rem;
+  background-color: #FFFFFF; }
+
+.section {
+  font-size: 0.85rem; }
+  @media screen and (min-width: 768px) {
+    .section {
+      margin-bottom: 1.5rem; } }
+
+.person {
+  padding-bottom: 1.5rem;
+  text-align: center; }
+
+.person__meta {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  font-family: "Noto Serif", "Georgia", serif; }
+  @media screen and (min-width: 768px) {
+    .person__meta {
+      overflow: hidden;
+      font-size: 0.85rem;
+      text-align: left; } }
+  .person__meta a {
+    text-decoration: none; }
+  .person__meta .fa {
+    margin-right: 0.5em;
+    color: #AAA; }
+
+.person__portrait > img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%; }
+
+@media screen and (min-width: 768px) {
+  .person__portrait {
+    float: left;
+    margin-right: 1.5rem; } }
+
+.person__name {
+  font-size: 2rem;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-bottom: 0.33rem;
+  margin-top: 0; }
+
+.person__address,
+.person__email,
+.person__github,
+.person__phone {
+  display: block; }
+  .person__address:after, .person__address:before,
+  .person__email:after,
+  .person__email:before,
+  .person__github:after,
+  .person__github:before,
+  .person__phone:after,
+  .person__phone:before {
+    content: " ";
+    display: table; }
+  .person__address:after,
+  .person__email:after,
+  .person__github:after,
+  .person__phone:after {
+    clear: both; }
+  .person__address,
+  .person__email,
+  .person__github,
+  .person__phone {
+    *zoom: 1; }
+
+.category {
+  font: 500 0.75em/1.8 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
+  text-transform: uppercase;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  margin: 10px 0; }
+
+.job__meta:after, .job__meta:before,
+.school__meta:after,
+.school__meta:before {
+  content: " ";
+  display: table; }
+
+.job__meta:after,
+.school__meta:after {
+  clear: both; }
+
+.job__meta,
+.school__meta {
+  *zoom: 1; }
+
+@media screen and (min-width: 768px) {
+  .item__name,
+  .job__title,
+  .school__name {
+    float: left;
+    margin: 0 1rem 0 0; } }
+
+.job {
+  margin: 0 0 1rem; }
+  .job:after, .job:before {
+    content: " ";
+    display: table; }
+  .job:after {
+    clear: both; }
+  .job {
+    *zoom: 1; }
+
+.job__company {
+  display: block;
+  color: #555;
+  font-style: italic; }
+  @media screen and (min-width: 768px) {
+    .job__company {
+      float: left; } }
+
+.job__date,
+.school__date {
+  color: #AAA;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85em;
+  text-transform: uppercase; }
+  @media screen and (min-width: 768px) {
+    .job__date,
+    .school__date {
+      float: right; } }
+
+.list--bullets {
+  font-size: 0.85rem;
+  padding-left: 0.5rem;
+  margin-left: 0.66rem; }
+  .list--bullets > li {
+    margin-bottom: 0.25em; }
+
+.job__description,
+.school__description,
+.skills {
+  margin-top: 0.5em; }
