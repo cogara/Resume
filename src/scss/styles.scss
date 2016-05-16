@@ -1,130 +1,160 @@
+$sans-serif: 'Noto Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: 'Noto Serif','Georgia', serif;
+$muted: #555; // grey
+$soft: #AAA; // light grey
+@mixin clearfix {
+    &:after,
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    & {
+        *zoom: 1;
+    }
+}
+@mixin shadow {
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+}
 * {
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
 body {
-	background-color:rgb(220, 220, 220);
-	background-image: linear-gradient(135deg, rgba(0,0,0,.8) 0%, rgba(220,220,220,.7) 50%);
-	position: relative;
-}
+    background-image: url('/imgs/bg-img.png');
+    background-color: #F2F2F2;
+    position: relative;
+    font: normal 1rem/1.4 $serif;
+    color: #222;
 
-.container, .note {
-	border: 1px solid rgba(150,150,150,.5);
-	box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4);
 }
-
+p {
+    margin-bottom: 1em;
+}
 .container {
-	position: relative;
-	min-width: 320px;
-	max-width: 900px;
-	margin: 75px auto 20px;
-	padding: 15px;
-	width: 95%;
-	background-color: rgb(235,235,235);
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) and (max-width: 1140px) {
+        padding: 2rem;
+    }
 }
-
-.note {
-	font-size: .85em;
-	background-color: white;
-	position: absolute;
-	left: 0;
-	top: -50px;
-	z-index: 2;
-	width: 100%;
-	padding: 5px 15px;
+.resume {
+    @include shadow;
+    position: relative;
+    padding: 2rem 2rem 0.25rem;
+    background-color: #FFFFFF;
 }
-
-.note p {
-	display: none;
-	margin: 10px 0;
-	text-indent: 10px;
+.section {
+    font-size: 0.85rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 1.5rem;
+    }
 }
-
-.note:hover h4 ~ p {
-	display: block;
+.person {
+    padding-bottom: 1.5rem;
+    text-align: center;
 }
-
-.myInfo {
-	height: 100px;
-	margin: 0 0 30px;
-	position: relative;
+.person__meta {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $muted;
+    font-family: $serif;
+    @media screen and (min-width: 768px) {
+        overflow: hidden;
+        font-size: 0.85rem;
+        text-align: left;
+    }
+    a {
+        text-decoration: none;
+    }
+    .fa {
+        margin-right: 0.5em;
+        color: $soft;
+    }
 }
-.name {
-	font-size: 1.5em;
+.person__portrait {
+    > img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+    @media screen and (min-width: 768px) {
+        float: left;
+        margin-right: 1.5rem;
+    }
 }
-
-.portrait {
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 120px;
-	width: 120px;
-	border: 7px solid white;
-	box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4);
+.person__name {
+    font-size: 2rem;
+    font-family: $sans-serif;
+    font-weight: normal;
+    margin-bottom: 0.33rem;
+    margin-top: 0;
+    @media screen and (min-width: 768px) {}
 }
-
-.portrait img {
-	width: 100%;
-	height: 100%;
+.person__address,
+.person__email,
+.person__github,
+.person__phone {
+    display: block;
+    @include clearfix;
 }
-
 .category {
-	font-size: 1.25em;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-	margin: 10px 0px 10px;
-	text-indent: 5px;
+    font: 500 0.75em/1.8 $sans-serif;
+    color: #555;
+    text-transform: uppercase;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    margin: 10px 0;
+}
+.job__meta,
+.school__meta {
+    @include clearfix;
 }
 
-.company {
-	font-size: .85em;
-	float: left;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	padding-right: 2px;
-	margin: 0 0 5px;
+.job__title,
+.school__name {
+    @media screen and (min-width: 768px) {
+        float: left;
+        margin: 0 1rem 0 0;
+    }
 }
-
-.title {
-	float: left;
-	clear: left;
-	text-indent: 10px;
-	font-size: .85em;
-	font-style: italic;
-	font-weight: normal;
+.job {
+    @include clearfix;
+    margin: 0 0 1rem;
 }
-
-.date {
-	float: right;
-	font-size: .85em;
-	font-style: italic;
+.job__company {
+    display: block;
+    color: $muted;
+    font-style: italic;
+    @media screen and (min-width: 768px) {
+        float: left;
+    }
 }
-
-.description {
-	clear: both;
-	font-size: .85em;
-	margin-bottom: 15px;
+.job__date,
+.school__date {
+    color: $soft;
+    font-family: $sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+        float: right;
+    }
 }
-
-.task {
-	margin-left: 20px;
+.list--bullets {
+    font-size: 0.85rem;
+    padding-left: 0.5rem;
+    margin-left: 0.66rem;
+    > li {
+        margin-bottom: 0.25em;
+    }
 }
-
-@media all and (max-width: 475px) {
-	body {
-		font-size: 14px;
-	}
-	.container {
-		width: 98%;
-	}
-	.portrait {
-		height: 75px;
-		width: 75px;
-	}
-	.myInfo {
-		height: 75px;
-		margin: 0 0 10px;
-	}
+.job__description,
+.school__description,
+.skills {
+    margin-top: 0.5em;
 }
