@@ -158,3 +158,28 @@ p {
 .skills {
     margin-top: 0.5em;
 }
+
+.hide-resume-button {
+  position: relative;
+  background-color: #CCC;
+  padding: 5px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+.hide-resume-button:hover {
+  background-color: #AAA;
+}
+
+.hide-resume-button a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
