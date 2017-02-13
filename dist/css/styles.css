@@ -25,13 +25,13 @@ p {
 
 .section {
   font-size: 0.85rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem; }
   @media screen and (min-width: 768px) {
     .section {
       margin-bottom: 1.5rem; } }
 
 .person {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   text-align: center; }
 
 .person__meta {
@@ -61,7 +61,8 @@ p {
 .person__address,
 .person__email,
 .person__github,
-.person__phone {
+.person__phone,
+.person__website {
   display: block; }
   .person__address:after, .person__address:before,
   .person__email:after,
@@ -69,18 +70,22 @@ p {
   .person__github:after,
   .person__github:before,
   .person__phone:after,
-  .person__phone:before {
+  .person__phone:before,
+  .person__website:after,
+  .person__website:before {
     content: " ";
     display: table; }
   .person__address:after,
   .person__email:after,
   .person__github:after,
-  .person__phone:after {
+  .person__phone:after,
+  .person__website:after {
     clear: both; }
   .person__address,
   .person__email,
   .person__github,
-  .person__phone {
+  .person__phone,
+  .person__website {
     *zoom: 1; }
 
 .category {
